@@ -10,5 +10,8 @@
 # Ignore Sass' cache
 /.sass-cache
 
+# Ignore builds
+/build
+
 # Daniel's ignores:
 /.idea
