@@ -1,3 +1,8 @@
+# Stuff I've added
+.idea
+
+
+# Github Ruby project defaults...
 *.gem
 *.rbc
 .bundle
