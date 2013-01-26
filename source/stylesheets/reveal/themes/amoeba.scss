@@ -1,0 +1,56 @@
+/**
+ * Beige theme for reveal.js.
+ * 
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'League Gothic';
+	src: url('../../../fonts/reveal/league_gothic-webfont.eot');
+	src: url('../../../fonts/reveal/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../../font/reveal/league_gothic-webfont.woff') format('woff'),
+		 url('../../../font/reveal/league_gothic-webfont.ttf') format('truetype'),
+		 url('../../../font/reveal/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// My Vars:
+$amoebaGreen: #A6CC2F;
+$amoebaGreenDark: #384F0E;
+$greenUltraDark: #002C1F;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $amoebaGreenDark;
+$linkColor: #8b743d;
+$linkColorHover: lighten( $amoebaGreenDark, 20% );
+$headingColor: $amoebaGreenDark;
+$headingTextShadow: none;
+$backgroundColor: $amoebaGreen;
+
+$selectionBackgroundColor: rgba($amoebaGreenDark, 0.99);
+$heading1TextShadow: 0 1px 0 lighten( $amoebaGreenDark, 20% ), 0 2px 0 lighten( $amoebaGreenDark, 30% ), 0 3px 0 lighten( $amoebaGreenDark, 40% ), 0 4px 0 lighten( $amoebaGreenDark, 50% ), 0 5px 0 lighten( $amoebaGreenDark, 60% ), 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( rgba($backgroundColor,1), rgba(255,255,255,1) );
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
