@@ -4,4 +4,24 @@ description: A great presentation.
 theme: amoeba
 ---
 
-<%= content_tag(:section, partial("slides/intro")) %>
+<%= content_tag(:section, partial("slides/title")) %>
+
+<section>
+  <%= partial("slides/personal_intro") %>
+</section>
+
+<section>
+  <%= partial("slides/ssdp_about") %>
+</section>
+
+<section>
+  <%= partial("slides/ssdp_why") %>
+</section>
+
+<%= content_tag(:section, partial("slides/youth_importance")) %>
+
+<section>
+  <%= partial("slides/timeline") %>
+</section>
+
+<%= content_tag(:section, partial("slides/final")) %>

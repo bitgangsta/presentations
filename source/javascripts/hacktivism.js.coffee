@@ -23,7 +23,7 @@ Reveal.initialize
     condition: ->
       !!document.querySelector("[data-markdown]")
   ,
-    src: "plugin/highlight/highlight.js"
+    src: "javascripts/reveal/plugins/highlight/highlight.js"
     async: true
     callback: ->
       hljs.initHighlightingOnLoad()
