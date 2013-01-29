@@ -2,7 +2,7 @@
 # Page options, layouts, aliases and proxies
 ###
 
-with_layout :hacktivism do
+with_layout :reveal do
   page "/hacktivism/*"
 end
 

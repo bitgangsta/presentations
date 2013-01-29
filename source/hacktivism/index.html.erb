@@ -4,24 +4,12 @@ description: A great presentation.
 theme: amoeba
 ---
 
-<%= content_tag(:section, partial("slides/title")) %>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "hacktivism" %>
+<% end %>
 
-<section>
-  <%= partial("slides/personal_intro") %>
-</section>
+<% slides = %w(title personal_intro ssdp_about ssdp_why youth_importance timeline final) %>
 
-<section>
-  <%= partial("slides/ssdp_about") %>
-</section>
-
-<section>
-  <%= partial("slides/ssdp_why") %>
-</section>
-
-<%= content_tag(:section, partial("slides/youth_importance")) %>
-
-<section>
-  <%= partial("slides/timeline") %>
-</section>
-
-<%= content_tag(:section, partial("slides/final")) %>
+<% slides.each do |slide| %>
+  <%= content_tag(:section, partial("slides/#{slide}")) %>
+<% end %>
