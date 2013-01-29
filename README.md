@@ -40,8 +40,29 @@ as you would for any reveal.js presentation. You can also use markdown. For exam
 >Note: You can also break the individual slides out inside partials (see one of the existing
 presentations for an example).
 
+## Optional Setup
+
 ### Custom themes
 
 The theme variable is optional, and will default to the reveal.js default theme. You can also define
 your own new themes by just making a scss file inside `source/stylesheets/reveal/themes` (copy an
 existing one to have a starting point).
+
+### Partials
+
+A very clean way to isolate your slides is into partials. For instance, create an index.html.erb with
+the following content:
+
+```
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "mypresentation" %>
+<% end %>
+
+<% slides = %w(title slide2 slide3 final) %>
+
+<% slides.each do |slide| %>
+  <%= content_tag(:section, partial("slides/#{slide}")) %>
+<% end %>
+```
+
+... and put your slides into the "slides" directory under your presentation. Super clean. Woot.
