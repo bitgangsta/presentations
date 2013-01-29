@@ -37,8 +37,21 @@ as you would for any reveal.js presentation. You can also use markdown. For exam
 </section>
 ```
 
->Note: You can also break the individual slides out inside partials (see one of the existing
-presentations for an example).
+>Note: You can also break the individual slides out inside partials (see below for an example).
+
+## Create a JS configuration for your presentation
+
+In order to wire everything together, you need to setup reveal and init it. To use the reveal
+defaults, include the following in your presentation:
+
+```
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "defaults" %>
+<% end %>
+```
+
+You can optionally create your own JS file by copying the defaults into a new file and
+including it as such.
 
 ## Optional Setup
 
@@ -54,10 +67,6 @@ A very clean way to isolate your slides is into partials. For instance, create a
 the following content:
 
 ```
-<% content_for :javascripts do %>
-  <%= javascript_include_tag "mypresentation" %>
-<% end %>
-
 <% slides = %w(title slide2 slide3 final) %>
 
 <% slides.each do |slide| %>
