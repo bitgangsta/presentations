@@ -2,9 +2,7 @@
 # Page options, layouts, aliases and proxies
 ###
 
-with_layout :reveal do
-  page "/hacktivism/*"
-end
+page "index.html", :layout => 'plain'
 
 ###
 # Helpers
